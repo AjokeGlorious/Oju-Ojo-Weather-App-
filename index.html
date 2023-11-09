@@ -12,15 +12,20 @@
 <body>
  <div class="weather-app">
   <header>
-    <form class="search-form">
-      <input type="search" placeholder="Enter a city" required  class="search-form-input"/>
+    <form class="search-form" id="search-form">
+      <input 
+      type="search" 
+      placeholder="Enter a city" 
+      required
+      id="search-form-input"
+      class="search-form-input"/>
       <input type="submit" value="search" class="search-form-button"/>
     </form>
   </header>
   <main>
     <div class="weather-app-data">
     <div>
-    <h1 class="weather-app-city">Lagos</h1>
+    <h1 class="weather-app-city" id="city">Lagos</h1>
     <p class="weather-app-details">
       Wednesday, 11:25, Clear Sky
       <br/>
@@ -28,7 +33,7 @@
     </p>
   </div>
   <div class="weather-app-temp-container">
-   <div class="weather-app-icon">☁</div>
+   <div class="weather-app-icon">🌤️</div>
    <div class="weather-app-temp">12</div>
    <div class="weather-app-unit">°C</div>
   </div>
@@ -40,5 +45,6 @@
     Ajoke Animashaun</a> is <a href="https://github.com/AjokeGlorious/Oju-Ojo-Weather-App-" target="_blank">open-sourced on GitHub</a> and <a href="https://ojuojoweather.netlify.app/" target="_blank"> hosted on Netlify</a>
 </footer>
 </diV>
+<script src="src/index.js"></script>
 </body>
 </html>
