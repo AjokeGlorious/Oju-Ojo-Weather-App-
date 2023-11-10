@@ -4,13 +4,30 @@ function getWeather(response) {
 let cityElement = document.querySelector("#city");
 let humidityElement = document.querySelector("#humidity");
 let descriptionElement = document.querySelector("#description");
-console.log(response.data.condition.description);
+let timeElement = document.querySelector("#time");
+let date = new Date(response.data.time * 1000);
+  console.log(response.data.time);
 
-
+timeElement.innerHTML = formatDate(date);
 cityElement.innerHTML = response.data.city;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 temperatureElement.innerHTML = Math.round(temperature) 
 descriptionElement.innerHTML = response.data.condition.description
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
 }
 
 function searchCity(city) {
