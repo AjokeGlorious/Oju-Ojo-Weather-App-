@@ -16,6 +16,7 @@ descriptionElement.innerHTML = response.data.condition.description
 }
 
 function formatDate(date) {
+ 
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -28,7 +29,13 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${hours}:${minutes}`;
 }
+
+
 
 function searchCity(city) {
   let apiKey = "4175dd44d23bf5fo300715703fa0tf94"
