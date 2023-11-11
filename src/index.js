@@ -6,8 +6,11 @@ let humidityElement = document.querySelector("#humidity");
 let descriptionElement = document.querySelector("#description");
 let timeElement = document.querySelector("#time");
 let date = new Date(response.data.time * 1000);
-  console.log(response.data.time);
+let iconElemeent = document.querySelector("#icons") 
 
+  console.log(response.data.time);
+iconElemeent.innerHTML = `<img src= ${response.data.condition.icon_url} alt="weather icons" class="weather-app-icon">
+`
 timeElement.innerHTML = formatDate(date);
 cityElement.innerHTML = response.data.city;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
