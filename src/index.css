@@ -82,6 +82,23 @@ main {
  
 
 }
+
+.weather-forecast {
+  margin-top: 24px; 
+  border-top: 1px solid white;
+}
+.weather-forecast-day {
+  opacity: 0.6;
+  font-size: 16px;
+ 
+ 
+}
+.weather-forecast-temp {
+  font-size: 16px;
+}
+.weather-forecast-temp-low {
+  opacity: 0.6;
+}
 footer {
   border-top: 1px #809ee7;
   padding: 30px 0 0 0;
