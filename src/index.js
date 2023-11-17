@@ -8,7 +8,7 @@ let timeElement = document.querySelector("#time");
 let date = new Date(response.data.time * 1000);
 let iconElemeent = document.querySelector("#icons") 
 
-  console.log(response.data.time);
+
 iconElemeent.innerHTML = `<img src= ${response.data.condition.icon_url} alt="weather icons" class="weather-app-icon">
 `
 timeElement.innerHTML = formatDate(date);
@@ -16,6 +16,8 @@ cityElement.innerHTML = response.data.city;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 temperatureElement.innerHTML = Math.round(temperature) 
 descriptionElement.innerHTML = response.data.condition.description
+
+getforecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -56,10 +58,18 @@ function handleSearchSubmit(event) {
  
 searchCity(searchInput.value);
 }
+function getforecast(city) {
+ let apiKey = "4175dd44d23bf5fo300715703fa0tf94" 
+ let apiUrl =`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`
+axios.get(apiUrl).then(displayForecast);
+}
 
 
-
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
+  
+  
+  
   let days = ["Sat", "Sun", "Tue", "Wed", "Thu"];
   let forecastHtml = "";
 
@@ -90,7 +100,8 @@ function displayForecast() {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Ibadan");
-displayForecast();
+
+
 
 
 
