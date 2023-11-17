@@ -55,9 +55,12 @@ function handleSearchSubmit(event) {
   
  
 searchCity(searchInput.value);
-}function displayForecast() {
+}
 
-  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
+
+function displayForecast() {
+  let days = ["Sat", "Sun", "Tue", "Wed", "Thu"];
   let forecastHtml = "";
 
   days.forEach(function(day) {
@@ -66,7 +69,7 @@ searchCity(searchInput.value);
          ${day}
        </div>
        
-       <div>
+       <div class="weather-forecast-icon">
          <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
              alt="weather icons"
              width="42px">

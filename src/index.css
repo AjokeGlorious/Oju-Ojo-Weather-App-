@@ -94,6 +94,11 @@ main {
  
  
 }
+.weather-app-icon {
+   text-align: center;
+   font-size: 38px;
+
+}
 .weather-forecast-temp {
   font-size: 16px;
 }
