@@ -91,12 +91,20 @@ main {
 .weather-forecast-day {
   opacity: 0.6;
   font-size: 16px;
- 
- 
 }
+
+.weather-forecast-icon {
+  width: 58px;
+  height: 38px;
+  display: block;
+  margin: 0 auto;
+
+}
+
 .weather-app-icon {
    text-align: center;
    font-size: 38px;
+
 
 }
 .weather-forecast-temp {
