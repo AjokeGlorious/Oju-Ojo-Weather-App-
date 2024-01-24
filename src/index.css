@@ -9,7 +9,8 @@ font-family: 'Merriweather', serif;
 a {
   color: #4d3e30;
 }
-.weather-app {background: rgb(206, 206, 221);
+.weather-app {
+  background: #f5f9fa;
   max-width: 600px;
   margin: 200px auto;
   padding: 30px;
